@@ -112,7 +112,7 @@ function NotesDialog() {
       <div className="dialog" style={{ maxHeight: '80%' }} onClick={stop}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="dialog-title">Notifications</div>
-          <button className="btn btn-ghost" onClick={clearNotes}>Clear</button>
+          <button className="btn btn-ghost" onClick={() => { clearNotes(); setNotesOpen(false) }}>Clear</button>
         </div>
         {notes.map((n) => (
           <div key={n.id} style={{ padding: '12px 14px', background: 'var(--color-bg)', borderRadius: 12 }}>
